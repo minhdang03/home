@@ -57,8 +57,25 @@ const services = {
   ]
 }
 
+import { ReactNode } from 'react'
 
-export default function Page({
+type LayoutProps = {
+  children: ReactNode
+  params: { lang: string }
+}
+
+export default function Layout({
+  children,
+  params: { lang }
+}: LayoutProps) {
+  return (
+    <div className="container" lang={lang}>
+      {children}
+    </div>
+  )
+}
+
+export function Page({
   params: { lang }
 }: {
   params: { lang: string }
