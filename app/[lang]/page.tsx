@@ -64,7 +64,7 @@ type LayoutProps = {
   params: { lang: string }
 }
 
-export default function Layout({
+export function Layout({
   children,
   params: { lang }
 }: LayoutProps) {
@@ -117,9 +117,22 @@ export function Page({
   )
 }
 
+export default Page;
+
 export function generateStaticParams() {
   return [
     { lang: 'en' },
     { lang: 'vi' }
   ]
+}
+
+export const metadata = {
+  title: {
+    en: 'MinhDangLu Services',
+    vi: 'Dịch Vụ Của MinhDangLu'
+  },
+  description: {
+    en: 'Netflix, Tools, Blog, Shop and more services by MinhDangLu',
+    vi: 'Netflix, Công Cụ, Blog, Cửa Hàng và nhiều dịch vụ khác của MinhDangLu'
+  }
 }
