@@ -57,24 +57,6 @@ const services = {
   ]
 }
 
-import { ReactNode } from 'react'
-
-type LayoutProps = {
-  children: ReactNode
-  params: { lang: string }
-}
-
-export function Layout({
-  children,
-  params: { lang }
-}: LayoutProps) {
-  return (
-    <div className="container" lang={lang}>
-      {children}
-    </div>
-  )
-}
-
 export function Page({
   params: { lang }
 }: {
@@ -82,7 +64,7 @@ export function Page({
 }) {
   return (
     <div className="container py-1">
-            <div className="d-flex justify-content-center align-items-center gap-3">
+      <div className="d-flex justify-content-center align-items-center gap-3">
         <Link 
           href={`/${lang === 'en' ? 'vi' : 'en'}`}
           className="btn btn-outline-dark rounded-circle"
