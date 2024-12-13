@@ -57,11 +57,12 @@ const services = {
   ]
 }
 
-export function Page({
-  params: { lang }
+export default async function Page({
+  params
 }: {
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }) {
+  const { lang } = await params;
   return (
     <div className="container py-1">
       <div className="d-flex justify-content-center align-items-center gap-3">
@@ -98,8 +99,6 @@ export function Page({
     </div>
   )
 }
-
-export default Page;
 
 export function generateStaticParams() {
   return [

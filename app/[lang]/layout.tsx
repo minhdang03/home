@@ -2,15 +2,13 @@ import { ReactNode } from 'react'
 
 type LayoutProps = {
   children: ReactNode
-  params: { lang: string }
 }
 
 export default function Layout({
-  children,
-  params: { lang }
+  children
 }: LayoutProps) {
   return (
-    <html lang={lang}>
+    <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
