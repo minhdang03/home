@@ -11,7 +11,7 @@ export const metadata = {
     siteName: 'MinhDangLu Services',
     images: [
       {
-        url: 'https://minhdanglu.com/og.jpg',
+        url: 'https://minhdanglu.com/og.png',
         width: 1200,
         height: 630,
       },
